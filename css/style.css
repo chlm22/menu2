@@ -1,0 +1,453 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background: #ffffff;
+  }
+.skip-main a {
+    position: absolute;
+    top: -40px;
+    color: #d1e8fc;
+    z-index: 10;
+  }
+  
+  .skip-main a:focus {
+    color: #d1e8fc;
+    background-color: #000000;
+    top: 20px;
+    position: absolute;
+    z-index: 10;
+  }
+
+.topNav{
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+justify-content: space-evenly;
+font-weight: 600;
+position:fixed;
+top:0;
+z-index: 10;
+background-color: #ffffff;
+}
+
+#logoo{
+    display:flex;
+    align-items: center;
+    padding-right:  60px;
+    font-size: 30px;
+}
+
+#logo{
+    height: 35px;
+    width: 35px;
+}
+
+#logo1{
+    padding-left: 10px;
+}
+
+.topNav a{
+    text-decoration: none;
+    color: #103154;
+    text-align: center;
+font-size: small;
+}
+
+nav li a:hover {
+    color: #808080;
+    text-decoration: dotted;
+    border: #000000 solid 2px;
+    padding: 5px;
+  }
+  
+  a.active {
+    background-color: #d1e8fc;
+    color: #000000;
+    padding: 5px;
+    top: 0;
+    /* border: 1px; */
+  }
+  
+
+footer {
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    font-weight: 600;
+  }
+
+nav#footernav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footernav p{
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+#insta{
+    width: 28px;
+height: 28px;
+}
+
+#insta:hover{
+    border: #000000 solid 2px;
+}
+#menuImg{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+.menuImage{
+    max-width: 80%
+  }
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 10px;
+  color: #D7AA59;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  border-radius: 3px 0 0 3px;
+  background-color: #103154;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+
+}
+.prev {
+    left: 0;
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color:#D7AA59;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  background-color: #103154;
+  color: #D7AA59;
+  width: 50%;
+  text-align: center;
+  border: #D7AA59 2px solid;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #D7AA59;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #103154;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#contactIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.maincontentContact{
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    align-items: center;
+    row-gap: 35px;
+    column-gap: 30px;
+  }
+
+  div#map{
+    width: 100px;
+    height: 200px;
+    width:min-content;
+    margin:auto;
+    overflow: hidden;
+  }
+
+#contactdiv1{
+    text-align: end;
+    font-weight: 700;
+  }
+
+  #contactdiv3{
+
+    font-weight: 700;
+    text-align: end;
+  }
+
+  #contactdiv5{
+    text-align: end;
+  }
+  
+  #hourUl{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;;
+  }
+
+  
+  #day{
+    grid-column-start: 1;
+  }
+  
+  #hours{
+    grid-column-start: 2;
+  }
+
+@media screen and (min-width: 920px){
+    .skip-main a {
+        position: absolute;
+        top: -40px;
+        color: #d1e8fc;
+        z-index: -10;
+        transition: cubic-bezier(1, 0, 0, 1);
+        -webkit-transition: top 1s ease-out;
+        /* I dont know how to get rid of the squigglyline */
+        /* but the code seems to work... so idk what that means */  
+      } 
+    
+      .skip-main a:focus {
+        font-size: large;
+        height: 70px;
+        width: 150px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        left: 15px;
+        padding-top: 15px;
+        top: 65px;
+        position: absolute;
+        z-index: 10;
+        font-weight: 700;
+      }
+
+      .topNav{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        }
+        
+        #logoo{
+            padding-right:  60px;
+        }
+        
+        #logo{
+            height: 55px;
+            width: 55px;
+        }
+        
+        #logo1{
+            padding-left: 30px;
+            font-size: 45px;
+        }
+        
+        .topNav a{
+            text-decoration: none;
+            color: #103154;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        nav li a:hover {
+            color: #808080;
+            text-decoration: dotted;
+            border: #000000 solid 2px;
+            padding: 5px;
+          }
+          
+          a.active {
+            background-color: #d1e8fc;
+            color: #000000;
+            padding: 5px;
+            top: 0;
+            /* border: 1px; */
+          }
+        
+        #footernav h2{
+            font-size: 35px;
+            font-weight: 700;padding-right: 30px;
+        }
+        
+        #insta{
+            width: 48px;
+        height: 48px;
+        }
+        
+
+        /* Next & previous buttons */
+        .prev, .next {
+          padding: 34px;
+          font-size: 25px;
+          border-radius: 8px 0 0 8px;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+            border-radius: 8px 0 0 8px;
+        
+        }
+        .prev {
+            border-radius: 0 8px 8px 0;
+          }
+        
+        /* Caption text */
+        .text {
+          font-size: 24px;
+          padding: 10px 4px;
+          bottom: 15px;
+          text-align: center;
+          border: #D7AA59 5px solid;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 55px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 20px;
+          width: 20px;
+          padding: 5px;
+        }
+
+        #contactIcon{
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+        }
+        
+        .maincontentContact{
+            padding-top: 110px;
+            padding-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-direction: row;
+            font-size: x-large;
+            align-items: center;
+            row-gap: 60px;
+            column-gap: 50px;
+          }
+        
+          div#map{
+            width: 100px;
+            height: 500px;
+            margin:auto;
+            overflow: hidden;
+          }
+        
+        #contactdiv1{
+            grid-column-start: 1;
+            grid-row-start: 1;
+            text-align: end;
+            font-weight: 700;
+          }
+          #contactdiv2{
+            grid-column: 2/span1;
+            grid-row-start: 1;
+          }
+          #contactdiv3{
+            grid-column-start: 1;
+            grid-row-start: 2;
+            font-weight: 700;
+            text-align: end;
+          }
+          #contactdiv4{
+            grid-column-start: 2;
+            grid-row-start: 2;
+          }
+          #contactdiv5{
+            grid-column-start: 1;
+            grid-row-start: 3;
+            text-align: end;
+          }
+          
+          #hourUl{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;;
+          }
+          
+          
+          #contactdiv6{
+            grid-column-start: 2;
+            grid-row-start: 3;
+          }
+          
+          #day{
+            grid-column-start: 1;
+          }
+          
+          #hours{
+            grid-column-start: 2;
+          }
+}
