@@ -223,9 +223,8 @@ height: 28px;
   }
 
   div#map{
-    width: 100px;
+    width: 100%;
     height: 200px;
-    width:min-content;
     margin:auto;
     overflow: hidden;
   }
@@ -259,6 +258,20 @@ height: 28px;
   #hours{
     grid-column-start: 2;
   }
+
+  .responsive-map {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+  .responsive-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 @media screen and (min-width: 920px){
     .skip-main a {
