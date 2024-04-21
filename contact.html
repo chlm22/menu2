@@ -52,12 +52,13 @@
                         </ul>
                     </div>
                     <div id="contactdiv5">
-                        <img src="images/phone.png" alt="phone icon" id="contactIcon">(248) 559-7370
+                        <img src="images/phone.png" alt="Phone icon" id="contactIcon">
+                        <span tabindex="0" aria-label="Phone number (248) 559-7370">(248) 559-7370</span>
                     </div>
-                    <div id="contactdiv6"><img src="images/location.png" alt="location icon" id="contactIcon">29307
-                        Southfield
-                        Rd, Southfield, MI 48076</div>
-        </div>
+                    <div id="contactdiv6">
+                        <img src="images/location.png" alt="Location icon" id="contactIcon">
+                        <span tabindex="0" aria-label="Address: 29307 Southfield Rd, Southfield, MI 48076">29307 Southfield Rd, Southfield, MI 48076</span>
+                    </div>
     </main>
     <footer>
         <nav id="footernav">
@@ -68,5 +69,21 @@
         </nav>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const focusableElements = document.querySelectorAll('[tabindex="0"]'); // Get all focusable elements
+        focusableElements.forEach(element => {
+            element.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {  // Use Enter key to trigger copy
+                    navigator.clipboard.writeText(element.textContent).then(() => {
+                        alert('Copied to clipboard: ' + element.textContent); // Alert or another indicator of success
+                    }).catch(err => {
+                        console.error('Error in copying text: ', err);
+                    });
+                }
+            });
+        });
+    });
+    </script>
 
 </html>
